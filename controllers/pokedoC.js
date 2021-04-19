@@ -1,13 +1,7 @@
 // Import Models
 const Poke = require("../models/pokeM");
-// Lib Validator
-const validator = require("fastest-validator");
-const v = new validator();
 // Lib Error
 const catchAsync = require("../utils/catchAsync");
-const request = require("request-promise");
-
-const APIFeatures = require("../utils/apiFeature");
 
 const { URL_SERVICE_CLIENT } = process.env;
 
