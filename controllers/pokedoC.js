@@ -11,6 +11,7 @@ module.exports = {
     axios
       .get(
         URL_SERVICE_CLIENT,
+        null,
         { params: req.query },
         {
           headers: {
@@ -19,6 +20,6 @@ module.exports = {
         }
       )
       .catch((err) => console.log(err))
-      .then((res) => console.log(res));
+      .then((res) => console.log(res.data));
   }),
 };
