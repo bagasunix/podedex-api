@@ -8,15 +8,17 @@ const { URL_SERVICE_CLIENT } = process.env;
 
 module.exports = {
   pokeapi: catchAsync(async (req, res) => {
-    // axios.get(URL_SERVICE_CLIENT + req.query).then(function (response) {
-    //   console.log(response);
-    // });
     axios
-      .get(URL_SERVICE_CLIENT, {
-        headers: {
-          Accept: "application/json",
-        },
-      })
+      .get(
+        URL_SERVICE_CLIENT,
+        { params: req.query },
+        {
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      )
+      .catch((err) => console.log(err))
       .then((res) => console.log(res));
   }),
 };
