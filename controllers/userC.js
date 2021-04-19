@@ -25,7 +25,6 @@ const signToken = (id, name, email, role, active) => {
       name,
       email,
       role,
-      avatar,
       active,
     },
     JWT_SECRET,
